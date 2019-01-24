@@ -1,15 +1,24 @@
 class View
 
 	def initialize(player1, player2)
-
-		    puts "#{player1} a le symbole x"
-	        puts "#{player2} a le symbole o"
-	      
+		puts "#{player1} a le symbole x"
+	    puts "#{player2} a le symbole o"     
 	end
 
-	def display_choice(choice_case, symbole_player)
-		puts "la case #{choice_case} prend la valeur #{symbole_player}"
+
+
+	def your_turn(array)
+		puts "|  #{array[0].symbole}  |  #{array[1].symbole}  |  #{array[2].symbole}  |"
+		puts "=" * 22
+		puts "|  #{array[3].symbole}  |  #{array[4].symbole}  |  #{array[5].symbole}  |"
+		puts "=" * 22
+		puts "|  #{array[6].symbole}  |  #{array[7].symbole}  |  #{array[8].symbole}  |"
+		puts ">>"
 	end
 
-	
+	def check_choice
+		puts "Nous prends pas pour des truffes noires du Périgord, retape une bonne case !!"
+		puts ">>"
+	end
+
 end
