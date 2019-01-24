@@ -30,7 +30,7 @@ attr_accessor :pseudo1, :pseudo2
 
     def perform #rappelle-toi que l'on fait "Router.new.perform" dans app.rb => après initialize, on définit perform.
 
-        #while true
+       while true
 
           #on affiche le menu
           puts "C'est à toi de jouer #{@pseudo1}"
@@ -48,9 +48,8 @@ attr_accessor :pseudo1, :pseudo2
 
           case_choice = gets.chomp #on attend le choix de l'utilisateur
           @game.move_player2(case_choice)
-
-
-        #end
+       end
+        
     end
 
 
