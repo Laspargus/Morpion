@@ -24,11 +24,23 @@ class Board
 
 
     def move_player1 (choice_case, symbole_player1)
-
-    	choice_case_player1 = Boardcase.new(choice_case, symbole_player1)
-    	puts choice_case_player1.position
-    	puts choice_case_player1.symbole
-
+        choice_case_player1 = Boardcase.new(choice_case, symbole_player1)
+        return choice_case_player1
+    	#puts choice_case_player1.position
+    	#puts choice_case_player1.symbole
     end
 
+
+    
+    def move_player2 (choice_case, symbole_player2)
+        choice_case_player2 = Boardcase.new(choice_case, symbole_player2)
+        return choice_case_player2
+    	#puts choice_case_player2.position
+    	#puts choice_case_player2.symbole
+
+
+	end
+
+
 end
+
