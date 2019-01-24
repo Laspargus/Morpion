@@ -13,7 +13,6 @@ class Game
         @player2=Player.new(pseudo2, "o")
         @my_view=View.new(pseudo1, pseudo2)
         @board=Board.new
-
     end
 
 
@@ -35,6 +34,15 @@ class Game
         @my_view.your_turn(@board.array)
     end
 
+    def check_choice(choice_case)
+        if @board.check_choice(choice_case) == false
+            @my_view.check_choice
+            return false
+
+        else return true
+            
+        end
+    end
 end
 
 
