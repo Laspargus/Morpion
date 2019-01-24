@@ -37,6 +37,21 @@ attr_accessor :pseudo1, :pseudo2
 
             #on récupère le choix de l'utilisateur
             case_choice = gets.chomp 
+
+                while true
+
+                    if @game.check_choice(case_choice) == true
+
+                    break
+                    else
+
+                    case_choice = gets.chomp 
+                    end
+
+                end
+
+
+
             @game.move_player1(case_choice)
 
             # Méthode winner
@@ -51,6 +66,22 @@ attr_accessor :pseudo1, :pseudo2
             @game.your_turn
 
             case_choice = gets.chomp #on attend le choix de l'utilisateur
+
+
+
+
+                while true
+
+                    if @game.check_choice(case_choice) == true
+
+                    break
+                    else
+
+                    case_choice = gets.chomp 
+                    end
+
+                end
+                
             @game.move_player2(case_choice)
 
 
