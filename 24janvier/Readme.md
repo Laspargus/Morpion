@@ -4,7 +4,7 @@ Notre jeu du Morpion</h1>
 <p>
 Ce jeu vous est offert par Nico & Max Ravensburger<br>
 <p>
-<img style="width:200px" src="https://images-eu.ssl-images-amazon.com/images/I/51GavJ7XrpL.png">
+<img src="https://camo.githubusercontent.com/6f73c7c1b4c66c9ca493942a3cce789e93477139/68747470733a2f2f696d616765732d65752e73736c2d696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f35314761764a375872704c2e706e67" data-canonical-src="https://images-eu.ssl-images-amazon.com/images/I/51GavJ7XrpL.png" style="max-width:100px;">
 </p>
 <br>
 En vous remerciant. 
