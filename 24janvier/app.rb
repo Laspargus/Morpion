@@ -4,4 +4,4 @@ require 'application'
 
 
 
-Application.new
+Application.new.perform
