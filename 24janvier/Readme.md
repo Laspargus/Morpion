@@ -2,7 +2,9 @@
 Notre jeu du Morpion</h1>
 
 <p>
-Ce jeu vous est offert par Nico & Max
+Ce jeu vous est offert par Nico & Max Ravensburger<br>
+<img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiD6a-k4YbgAhUCrxoKHWJ4AJIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.amazon.fr%2FRavensburger-Digital-GmbH-Puzzle%2Fdp%2FB00NV4IOFU&psig=AOvVaw3ohxIY-FMnITaU8Fr3K5KX&ust=1548431037968484">
+<br>
 En vous remerciant. 
 </p>
 
