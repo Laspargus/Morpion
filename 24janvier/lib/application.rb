@@ -36,68 +36,71 @@ attr_accessor :pseudo1, :pseudo2
     end
 
     def perform 
-        
+
+       #Le jeu est lancé en boucle
        while true
             system "clear"
             puts "C'est à toi de jouer #{@pseudo1}"
             puts "Choisis ta case : "
             puts ""
+
+            #On affiche l'échiquier
             @game.your_turn
 
 
             #on récupère le choix de l'utilisateur
             case_choice = gets.chomp 
 
+                #On ne conserve la réponse de l'utilisateur que si elle passe le filtre check_choice
                 while true
-
                     if @game.check_choice(case_choice) == true
-
                     break
                     else
-
                     case_choice = gets.chomp 
                     end
-
                 end
 
 
-
+           # Si la résponse est correcte on remplit la case avec une croix
             @game.move_player1(case_choice)
 
-            # Méthode winner
+            # On vérifie s'il y a un gagnant
+            #Si oui on stop le jeu
+            #Si non on passe au joueur suivant
             winner = @game.winner
                 if winner == true then 
                     puts "Vous avez gagné #{@pseudo1}"
                 break
                 end
+
+            #On clean l'écran pour le joueur 2
             system "clear"
             puts "C'est à toi de jouer #{@pseudo2}"
             puts "Choisis ta case : "
             puts ""
+
+            #On affiche l'échiquier
             @game.your_turn
 
+            #On récupère la réponse de l'utilisateur 2
+            case_choice = gets.chomp 
 
-            case_choice = gets.chomp #on attend le choix de l'utilisateur
-
-
-
-
+                #On ne conserve la réponse de l'utilisateur que si elle passe le filtre check_choice
                 while true
-
                     if @game.check_choice(case_choice) == true
-
                     break
                     else
-
                     case_choice = gets.chomp 
                     end
-
                 end
-
+            
+            # Si la résponse est correcte on remplit la case avec un rond
             @game.move_player2(case_choice)
 
 
-            # Méthode winner
+            # On vérifie s'il y a un gagnant
+            #Si oui on stop le jeu
+            #Si non on passe au premier joueur
             winner = @game.winner
                 if winner == true 
                     then puts "Vous avez gagné #{@pseudo2}"
