@@ -2,7 +2,8 @@
 Notre jeu du Morpion</h1>
 
 <p>
-ca se passe ici
+Ce jeu vous est offert par Nico & Max
+En vous remerciant. 
 </p>
 
 
