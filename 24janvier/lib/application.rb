@@ -58,7 +58,7 @@ attr_accessor :pseudo1, :pseudo2
             # Méthode winner
             winner = @game.winner
                 if winner == true then 
-                    puts "Vous avez gagné player_1"
+                    puts "Vous avez gagné #{@pseudo1}"
                 break
                 end
             system "clear"
@@ -91,7 +91,7 @@ attr_accessor :pseudo1, :pseudo2
             # Méthode winner
             winner = @game.winner
                 if winner == true 
-                    then puts "Vous avez gagné player_2"
+                    then puts "Vous avez gagné #{@pseudo2}"
                     break
                 end
 
