@@ -54,6 +54,21 @@ class Board
 	end
 
 
+    def check_choice(choice_case)
+
+    	result = false
+
+    	@array.each do |instance|
+    		
+	    		if instance.position == choice_case && instance.symbole == choice_case
+	    			result = true
+	    		end
+    	end
+    	return result
+    end
+
+
+
 
 	def winner
 
