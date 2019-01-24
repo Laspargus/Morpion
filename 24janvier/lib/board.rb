@@ -39,4 +39,24 @@ class Board
     	#puts choice_case_player2.symbole
 
     end
+
+   def  winner
+        if ('a1'.nil? && 'a2'.nil? && 'a3'.nil?)
+            puts "a1 a2 et a3 ne sont pas toutes choisies"
+            result=false
+
+        else
+            #if  ('a1'.symbole=='a2'.symbole && 'a2'.symbole=='a3'.symbole)
+             #   result=true
+            #else
+             #   result=false
+            #end
+            puts "a1 a2 et a3 ont déja été choisies"
+            result=true
+        end
+    
+        return result
+
+
+    end
 end

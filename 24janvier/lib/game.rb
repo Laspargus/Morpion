@@ -31,6 +31,11 @@ class Game
         @my_view.display_choice(params_move_player2)
     end
 
+    def winner
+        @board.winner
+     
+    end
+
 end
 
 

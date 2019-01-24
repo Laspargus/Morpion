@@ -32,22 +32,33 @@ attr_accessor :pseudo1, :pseudo2
 
        while true
 
-          #on affiche le menu
-          puts "C'est à toi de jouer #{@pseudo1}"
-          puts "Choisis ta case : "
-          puts "a1, a2, a3, b1, b2, b3, c1, c2, c3"
-          puts ">>"
+        #on affiche le menu
+        puts "C'est à toi de jouer #{@pseudo1}"
+        puts "Choisis ta case : "
+        puts "a1, a2, a3, b1, b2, b3, c1, c2, c3"
+        puts ">>"
 
-          case_choice = gets.chomp #on attend le choix de l'utilisateur
-          @game.move_player1(case_choice)
+        case_choice = gets.chomp #on attend le choix de l'utilisateur
+        @game.move_player1(case_choice)
+        win=@game.winner
+       
+        puts win
 
-          puts "C'est à toi de jouer #{@pseudo2}"
-          puts "Choisis ta case : "
-          puts "a1, a2, a3, b1, b2, b3, c1, c2, c3"
-          puts ">>"
+            case win
+            when true
+                "Nous avons un gagant"
+                
+            when false
 
-          case_choice = gets.chomp #on attend le choix de l'utilisateur
-          @game.move_player2(case_choice)
+                puts "C'est à toi de jouer #{@pseudo2}"
+                puts "Choisis ta case : "
+                puts "a1, a2, a3, b1, b2, b3, c1, c2, c3"
+                puts ">>"
+
+                case_choice = gets.chomp #on attend le choix de l'utilisateur
+                @game.move_player2(case_choice)
+    
+            end 
        end
         
     end
