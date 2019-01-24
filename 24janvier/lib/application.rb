@@ -1,6 +1,8 @@
 #LIAISON AVEC LE GAME
 $:.unshift File.expand_path("../", __FILE__)
 require 'game'
+require'pry'
+
 #require 'player'
 
 class Application 
@@ -40,6 +42,12 @@ attr_accessor :pseudo1, :pseudo2
        #Le jeu est lancé en boucle
        while true
             system "clear"
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#ON COMMENCE AVEC LE JOUEUR 1
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             puts "C'est à toi de jouer #{@pseudo1}"
             puts "Choisis ta case : "
             puts ""
@@ -63,7 +71,7 @@ attr_accessor :pseudo1, :pseudo2
 
            # Si la résponse est correcte on remplit la case avec une croix
             @game.move_player1(case_choice)
-
+           
             # On vérifie s'il y a un gagnant
             #Si oui on stop le jeu
             #Si non on passe au joueur suivant
@@ -72,6 +80,17 @@ attr_accessor :pseudo1, :pseudo2
                     puts "Vous avez gagné #{@pseudo1}"
                 break
                 end
+
+            #Si au 9 eme coup joué , il n'ya pas de gagnant, on break et on affiche Match Nul 
+            if Game.game_count>=9
+                puts "Match Nul"
+                break
+            end
+               
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#ON PASSE AU JOUEUR 2
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
             #On clean l'écran pour le joueur 2
             system "clear"
@@ -96,7 +115,7 @@ attr_accessor :pseudo1, :pseudo2
             
             # Si la résponse est correcte on remplit la case avec un rond
             @game.move_player2(case_choice)
-
+           
 
             # On vérifie s'il y a un gagnant
             #Si oui on stop le jeu
@@ -106,11 +125,15 @@ attr_accessor :pseudo1, :pseudo2
                     then puts "Vous avez gagné #{@pseudo2}"
                     break
                 end
-
+            
        end
+
+       
         
     end
 
 
 
 end
+
+

@@ -5,7 +5,10 @@ require 'board'
 require 'boardcase'
 require 'view'
 
-class Game
+class Game 
+
+
+    @@game_count = 0 #
 
     #On instancie 2 joueurs à l'initialisation du jeu, une vue et un échiquier
     def initialize (pseudo1, pseudo2)
@@ -19,12 +22,14 @@ class Game
     def move_player1 (choice_case)
         symbole_player1 = @player1.symbole
         @board.move_player1(choice_case, symbole_player1)
+        @@game_count+=1
     end
 
     #Lorsque le player 2 joue, on instancie le Board avec son choix et son symbole
     def move_player2 (choice_case)
         symbole_player2 = @player2.symbole
         @board.move_player2(choice_case, symbole_player2) 
+        @@game_count+=1
     end
 
     #On vérifie si l'un des joueurs a gagné en instanciant le Board. 
@@ -37,6 +42,7 @@ class Game
         @my_view.your_turn(@board.array)
     end
 
+   
 
     #On vérifie la validité de la réponse des joueurs dans le Board
     #Si la réponse est non conforme, on lui envoi un message depuis la view
@@ -49,6 +55,12 @@ class Game
             
         end
     end
+
+  
+    def self.game_count
+            return @@game_count
+    end
+
 
 end
 
