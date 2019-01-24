@@ -13,12 +13,12 @@ class View
 		puts "|  #{array[3].symbole}  |  #{array[4].symbole}  |  #{array[5].symbole}  |"
 		puts "=" * 22
 		puts "|  #{array[6].symbole}  |  #{array[7].symbole}  |  #{array[8].symbole}  |"
-		puts ">>"
+		print ">> "
 	end
 
 	def check_choice
 		puts "Nous prends pas pour des truffes noires du Périgord, retape une bonne case !!"
-		puts ">>"
+		print ">> "
 	end
 
 end

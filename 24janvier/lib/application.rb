@@ -7,33 +7,34 @@ class Application
 attr_accessor :pseudo1, :pseudo2
 
     def initialize
-        puts "Bienvenue dans notre jeu"
-
-        puts "Utilisateur 1"
-        puts "Renseignez votre Pseudo"
-        puts ">>"
+        system "clear"
+        puts "Bienvenue dans notre jeu Joueur 1"
+        puts "Veuillez renseignez votre Pseudo"
+        print ">> "
         @pseudo1=gets.chomp
 
-
-        puts "Utilisateur 2"
-        puts "Renseignez votre Pseudo"
-        puts ">>"
+        puts "Bienvenue dans notre jeu Joueur 2"
+        puts "Veuillez renseignez votre Pseudo"
+        print ">> "
         @pseudo2=gets.chomp
 
         @game = Game.new(@pseudo1, @pseudo2)
+        system "clear"
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts "Bienvenue #{@pseudo1} et #{@pseudo2}. Notre partie peut commencer"
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-
-
+        sleep 2
     end
 
     def perform #rappelle-toi que l'on fait "Router.new.perform" dans app.rb => après initialize, on définit perform.
 
        while true
+            system "clear"
             puts "C'est à toi de jouer #{@pseudo1}"
             puts "Choisis ta case : "
+            puts ""
             @game.your_turn
+
 
             #on récupère le choix de l'utilisateur
             case_choice = gets.chomp 
@@ -60,10 +61,12 @@ attr_accessor :pseudo1, :pseudo2
                     puts "Vous avez gagné player_1"
                 break
                 end
-
+            system "clear"
             puts "C'est à toi de jouer #{@pseudo2}"
             puts "Choisis ta case : "
+            puts ""
             @game.your_turn
+
 
             case_choice = gets.chomp #on attend le choix de l'utilisateur
 
@@ -81,7 +84,7 @@ attr_accessor :pseudo1, :pseudo2
                     end
 
                 end
-                
+
             @game.move_player2(case_choice)
 
 
