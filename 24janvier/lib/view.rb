@@ -7,8 +7,8 @@ class View
 	      
 	end
 
-	def display_choice(params_move_player)
-		puts "la case #{params_move_player.position} prend la valeur #{params_move_player.symbole}"
+	def display_choice(choice_case, symbole_player)
+		puts "la case #{choice_case} prend la valeur #{symbole_player}"
 	end
 
 	

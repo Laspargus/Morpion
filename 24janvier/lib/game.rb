@@ -21,16 +21,24 @@ class Game
 
     def move_player1 (choice_case)
         symbole_player1 = @player1.symbole
-        params_move_player1=@board.move_player1(choice_case, symbole_player1)
-        @my_view.display_choice(params_move_player1)
+
+        @board.move_player1(choice_case, symbole_player1)
+        
+        @my_view.display_choice(choice_case, symbole_player1)
+
     end
 
     def move_player2 (choice_case)
         symbole_player2 = @player2.symbole
-        params_move_player2=@board.move_player2(choice_case, symbole_player2)
-        @my_view.display_choice(params_move_player2)
+
+        @board.move_player2(choice_case, symbole_player2)
+        
+        @my_view.display_choice(choice_case, symbole_player2)
     end
 
+    def winner
+        @board.winner
+    end
 end
 
 
