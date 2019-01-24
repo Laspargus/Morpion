@@ -1,12 +1,14 @@
 class View
 
+	#Affiche la ditribution des symboles au début du jeu
 	def initialize(player1, player2)
 		puts "#{player1} a le symbole x"
 	    puts "#{player2} a le symbole o"     
 	end
 
 
-
+	#affiche l'échiquier en puisant à chaque coup dans le tableau du Board. 
+	#Permet d'afficher le symbole dynamiquement
 	def your_turn(array)
 		puts "|  #{array[0].symbole}  |  #{array[1].symbole}  |  #{array[2].symbole}  |"
 		puts "=" * 22
@@ -16,6 +18,7 @@ class View
 		print ">> "
 	end
 
+	#En cas de réponse éronnés de l'utilisateur, on affiche ce message
 	def check_choice
 		puts "Nous prends pas pour des truffes noires du Périgord, retape une bonne case !!"
 		print ">> "
