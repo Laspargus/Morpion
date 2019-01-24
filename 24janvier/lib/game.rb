@@ -16,6 +16,8 @@ class Game
         @my_view=View.new(pseudo1, pseudo2)
         @board=Board.new
 
+
+
     end
 
 
@@ -25,6 +27,8 @@ class Game
         @board.move_player1(choice_case, symbole_player1)
         
         @my_view.display_choice(choice_case, symbole_player1)
+
+        @my_view.display_array(@board)
 
     end
 
