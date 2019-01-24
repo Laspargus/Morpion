@@ -8,15 +8,15 @@ class Board
 
     def initialize
 
-        @a1 = Boardcase.new("a1", " ")
-        @a2 = Boardcase.new("a2", " ")
-        @a3 = Boardcase.new("a3", " ")
-        @b1 = Boardcase.new("b1", " ")
-        @b2 = Boardcase.new("b2", " ")
-        @b3 = Boardcase.new("b3", " ")
-        @c1 = Boardcase.new("c1", " ")
-        @c2 = Boardcase.new("c2", " ")
-        @c3 = Boardcase.new("c3", " ")
+        @a1 = Boardcase.new("a1", "a1")
+        @a2 = Boardcase.new("a2", "a2")
+        @a3 = Boardcase.new("a3", "a3")
+        @b1 = Boardcase.new("b1", "b1")
+        @b2 = Boardcase.new("b2", "b2")
+        @b3 = Boardcase.new("b3", "b3")
+        @c1 = Boardcase.new("c1", "c1")
+        @c2 = Boardcase.new("c2", "c2")
+        @c3 = Boardcase.new("c3", "c3")
 
 
         @array = [@a1, @a2, @a3, @b1, @b2, @b3, @c1, @c2, @c3]
@@ -56,7 +56,7 @@ class Board
 
 
 	def winner
-		
+
         if @a1.symbole == @a2.symbole && @a2.symbole == @a3.symbole && @a1.symbole != " "
         	return true
 
